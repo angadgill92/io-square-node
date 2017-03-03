@@ -13,7 +13,7 @@ Separate pure and impure functions in NodeJS
 ``````javascript
 const IO = require('io-square-node')
 
-new IO.get('http://google.com')
+IO.get('http://google.com')
 	  .then(body => {
         console.log(body)
 	  })
