@@ -1,0 +1,18 @@
+{
+  "name": "io-square-node",
+  "version": "0.0.1",
+  "description": "IO Monad library for NodeJS",
+  "main": "src/io-square-node.js",
+  "keywords": [
+    "IO",
+    "Monad",
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Santosh Rajan",
+  "license": "MIT",
+  "dependencies": {
+    "io-square": "^0.1.5",
+    "request": "^2.79.0"
+  }
+}
