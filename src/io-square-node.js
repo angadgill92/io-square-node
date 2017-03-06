@@ -25,7 +25,14 @@ class IONode extends IO {
         return data
       })
   }
+
+  static putLine (data) {
+    return new IO(cb => process.nextTick(cb, data))
+      .error(errCb)
+      .then(data => {
+        console.log(data)
+      })
+  }
 }
 
 module.exports = IONode
-
