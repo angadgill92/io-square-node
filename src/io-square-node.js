@@ -29,8 +29,9 @@ class IONode extends IO {
   static putLine (data) {
     return new IO(cb => process.nextTick(cb, data))
       .error(errCb)
-      .then(data => {
+      .map(data => {
         console.log(data)
+        return data
       })
   }
 }
