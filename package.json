@@ -1,6 +1,6 @@
 {
   "name": "io-square-node",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "IO Monad library for NodeJS",
   "main": "src/io-square-node.js",
   "keywords": [
