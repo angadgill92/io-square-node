@@ -1,6 +1,7 @@
 const IO = require('io-square')
 const request = require('request')
 const readline = require('readline')
+const fs = require('fs')
 
 const rlConfig = {
   input: process.stdin,
@@ -33,6 +34,17 @@ class IONode extends IO {
         console.log(...data)
         return data
       })
+  }
+
+  static readFile (filename) {
+    return new IO(cb => fs.readFile(filename, cb))
+      .error(errCb)
+      .map((_, data) => data.toString())
+  }
+
+  static writeFile (filename, data) {
+    return new IO(cb => fs.writeFile(filename, data, cb))
+      .error(errCb)
   }
 }
 
